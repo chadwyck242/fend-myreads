@@ -2,6 +2,11 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 class BookSearch extends Component {
+
+    state = {
+        query: ''
+    }
+
     render() {
         return (
             <div className="search-books">
