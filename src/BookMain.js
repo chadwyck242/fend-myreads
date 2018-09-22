@@ -6,7 +6,7 @@ import Book from './Book'
 class BookMain extends Component {
     render() {
         console.log(this.props.books)
-        const { books } = this.props
+        const { books, changeShelf } = this.props
         return (
             <div className="list-books">
                 <div className="list-books-title">
@@ -20,7 +20,10 @@ class BookMain extends Component {
                                 <ol className="books-grid">
                                     {books.filter((book) => book.shelf === 'currentlyReading').map((book) => (
                                         <li key={book.id}>
-                                            <Book book={book} />
+                                            <Book
+                                                book={book}
+                                                changeShelf={changeShelf}
+                                            />
                                         </li>
                                     ))
                                     }
@@ -33,7 +36,10 @@ class BookMain extends Component {
                                 <ol className="books-grid">
                                     {books.filter((book) => book.shelf === 'wantToRead').map((book) => (
                                         <li key={book.id}>
-                                            <Book book={book} />
+                                            <Book
+                                                book={book}
+                                                changeShelf={changeShelf}
+                                            />
                                         </li>
                                     ))
                                     }
@@ -46,7 +52,10 @@ class BookMain extends Component {
                                 <ol className="books-grid">
                                     {books.filter((book) => book.shelf === 'read').map((book) => (
                                         <li key={book.id}>
-                                            <Book book={book} />
+                                            <Book
+                                                book={book}
+                                                changeShelf={changeShelf}
+                                            />
                                         </li>
                                     ))
                                     }

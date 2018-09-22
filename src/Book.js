@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function Book(props) {
 
-        const { book } = props
+        const { book, changeShelf } = props
         let imageURL = (book.imageLinks && `url(${book.imageLinks.thumbnail})`)
         const authorString = book.authors && book.authors.join(', ');
 
@@ -20,8 +20,11 @@ function Book(props) {
                         }}>
                     </div>
                     <div className="book-shelf-changer">
-                        <select>
-                            <option value="move" disabled>Move to...</option>
+                        <select
+                            onChange={(event) => changeShelf(
+                                book, event.target.value
+                            )}>
+                            <option value="move" selected disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
                             <option value="read">Read</option>
