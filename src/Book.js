@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 
 function Book(props) {
 
-        const { book, changeShelf } = props
+        Book.propTypes = {
+            book: PropTypes.object.isRequired,
+            changeShelf: PropTypes.func.isRequired
+        }
+
+        const { book, changeShelf, currentShelf } = props
         let imageURL = (book.imageLinks && `url(${book.imageLinks.thumbnail})`)
         const authorString = book.authors && book.authors.join(', ');
 
@@ -17,14 +22,17 @@ function Book(props) {
                             width: 128,
                             height: 193,
                             backgroundImage: imageURL
-                        }}>
+                        }}
+                    >
                     </div>
                     <div className="book-shelf-changer">
                         <select
                             onChange={(event) => changeShelf(
                                 book, event.target.value
-                            )}>
-                            <option value="move" selected disabled>Move to...</option>
+                            )}
+                            value={currentShelf}
+                        >
+                            <option value="move" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
                             <option value="read">Read</option>

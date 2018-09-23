@@ -7,6 +7,12 @@ class BookSearch extends Component {
         query: ''
     }
 
+    updateQuery = (query) => {
+        this.setState({
+            query: query
+        })
+    }
+
     render() {
         return (
             <div className="search-books">

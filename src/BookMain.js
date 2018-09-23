@@ -5,6 +5,12 @@ import Book from './Book'
 
 class BookMain extends Component {
     render() {
+
+        BookMain.propTypes = {
+            books: PropTypes.array.isRequired,
+            changeShelf: PropTypes.func.isRequired
+        }
+
         console.log(this.props.books)
         const { books, changeShelf } = this.props
         return (
@@ -23,6 +29,7 @@ class BookMain extends Component {
                                             <Book
                                                 book={book}
                                                 changeShelf={changeShelf}
+                                                currentShelf="currentlyReading"
                                             />
                                         </li>
                                     ))
@@ -39,6 +46,7 @@ class BookMain extends Component {
                                             <Book
                                                 book={book}
                                                 changeShelf={changeShelf}
+                                                currentShelf="wantToRead"
                                             />
                                         </li>
                                     ))
@@ -55,6 +63,7 @@ class BookMain extends Component {
                                             <Book
                                                 book={book}
                                                 changeShelf={changeShelf}
+                                                currentShelf="read"
                                             />
                                         </li>
                                     ))
