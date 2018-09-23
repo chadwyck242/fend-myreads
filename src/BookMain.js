@@ -71,7 +71,7 @@ class BookMain extends Component {
                     </div>
                 </div>
                 <div className="open-search">
-                    <link to="/search">Add a book</link>
+                    <Link to="/search">Add a book</Link>
                 </div>
             </div>
         )
