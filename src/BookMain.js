@@ -1,15 +1,12 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Book from './Book'
 
 
 class BookMain extends Component {
-    render() {
 
-        BookMain.propTypes = {
-            books: PropTypes.array.isRequired,
-            changeShelf: PropTypes.func.isRequired
-        }
+    render() {
 
         console.log(this.props.books)
         const { books, changeShelf } = this.props
@@ -74,10 +71,15 @@ class BookMain extends Component {
                     </div>
                 </div>
                 <div className="open-search">
-                    <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+                    <link to="/search">Add a book</link>
                 </div>
             </div>
         )
+    }
+
+    static propTypes = {
+        books: PropTypes.array.isRequired,
+        changeShelf: PropTypes.func.isRequired
     }
 }
 
