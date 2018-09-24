@@ -4,19 +4,26 @@ The first if the React projects, but sixth project overall, of the Front End Dev
 
 ## Getting Started
 
-This project is simple to run on your local machine, as all the is needed is NodeJS and the cloned repository.
+This project is simple to run on your local machine, as all that is needed is NodeJS and the cloned project repository.
 
 
 ### Prerequisites
 
 * NodeJS
 * npm
-* Create React App if you want to rey building from scratch.
+* Create React App if you want to try building from scratch.
 
 
 ### Installing
 
 Just follow these steps:
+
+1. Install NodeJS [here](https://nodejs.org/en/download/)
+2. Clone the project repository at `https://github.com/chadwyck242/fend-myreads`
+3. Navigate to the project root folder in your terminal and run `npm install` to ensure all dependencies are met.
+4. Run `npm start` and the project will start in your browser.
+
+*Note: The project is built with a Udacity supplied BooksAPI that only accepts a limited number, 20 or so, search terms. Entering anything other than these search terms will result in an empty query. The search terms are located in the `SEARCH_TERMS.md` file.*
 
 
 
@@ -40,6 +47,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Maeva NAP [walkthrough](https://www.youtube.com/watch?v=i6L2jLHV9j8)
+* Ryan Waite [walkthrough](https://www.youtube.com/watch?v=acJHkd6K5kI&feature=youtu.be)
+* React Documentation [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
