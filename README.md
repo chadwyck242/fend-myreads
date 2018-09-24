@@ -4,7 +4,9 @@ The first if the React projects, but sixth project overall, of the Front End Dev
 
 ## Getting Started
 
-This project is simple to run on your local machine, as all that is needed is NodeJS and the cloned project repository.
+This project is simple to run on your local machine, as all that is needed is NodeJS and the cloned project repository. To use the app, there are the following features:
+
+* You can sort books based on status, using the dropdown selector: Currently Reading, Want to Read and Read. These books are then placed on a matching shelf according to your selection. You can also open a Search bar using the on-screen button and search for books. Your search selections then can be added to the categories listed about, and added to the appropriate bookshelf.
 
 
 ### Prerequisites
