@@ -11,7 +11,7 @@ This project is simple to run on your local machine, as all that is needed is No
 
 * NodeJS
 * npm
-* Create React App if you want to try building from scratch.
+* Create-React-App if you want to try building from scratch.
 
 
 ### Installing
@@ -29,7 +29,7 @@ Just follow these steps:
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This project may be viewable as a GitHub Project page [here](https://chadwyck242.github.io/fend-myreads/) . This is a project website built with the [gh-pages](https://www.npmjs.com/package/gh-pages) npm package. 
 
 ## Built With
 

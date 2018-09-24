@@ -1,4 +1,4 @@
-{ "homepage": "https://github.com/chadwyck242/fend-myreads",
+{ "homepage": "https://chadwyck242.github.io/fend-myreads/",
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
     "gh-pages": "^2.0.0",
