@@ -29,7 +29,7 @@ Just follow these steps:
 
 ## Deployment
 
-This project may be viewable as a GitHub Project page [here](https://chadwyck242.github.io/fend-myreads/) . This is a project website built with the [gh-pages](https://www.npmjs.com/package/gh-pages) npm package. 
+This project may be viewable as a GitHub Project page [here](https://chadwyck242.github.io/fend-myreads/) . This is a project website built with the [gh-pages](https://www.npmjs.com/package/gh-pages) npm package.
 
 ## Built With
 
@@ -50,3 +50,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Maeva NAP [walkthrough](https://www.youtube.com/watch?v=i6L2jLHV9j8)
 * Ryan Waite [walkthrough](https://www.youtube.com/watch?v=acJHkd6K5kI&feature=youtu.be)
 * React Documentation [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+
+### Quick Reflection
+This is the one of the final two projects for the Grow with Google Scholarship Front End Developer NanoDegree. Of all the topics so far, this has been one of the more challenging to suddenly start with as React is much different than what we have been doing up until this point. As to why the starting projects of the React NanoDegree would comprise the ending of the FEND program is a bit confusing to me, as I am sure there is plenty that could have been covered in a pure Front End education. But after trying to work through this first project with React, I plan on coming back later and trying again. Having to rush near the end of the term left little time to explore, but I have become very curious about these new ways to build applications for the Front End.
