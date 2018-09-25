@@ -6,7 +6,9 @@ The first if the React projects, but sixth project overall, of the Front End Dev
 
 This project is simple to run on your local machine, as all that is needed is NodeJS and the cloned project repository. To use the app, there are the following features:
 
-* You can sort books based on status, using the dropdown selector: Currently Reading, Want to Read and Read. These books are then placed on a matching shelf according to your selection. You can also open a Search bar using the on-screen button and search for books. Your search selections then can be added to the categories listed about, and added to the appropriate bookshelf.
+* You can sort books based on status, using the dropdown selector: Currently Reading, Want to Read and Read.
+* These books are then placed on a matching shelf according to your selection. You can also open a Search bar using the on-screen button and search for books.
+* Your search selections then can be added to the categories listed about, and added to the appropriate bookshelf.
 
 
 ### Prerequisites
@@ -31,7 +33,7 @@ Just follow these steps:
 
 ## Deployment
 
-This project may be viewable as a GitHub Project page [here](https://chadwyck242.github.io/fend-myreads/) . This is a project website built with the [gh-pages](https://www.npmjs.com/package/gh-pages) npm package.
+TODO: Plan on making this a GitHub Projects page once finishing the FEND NanoDegree and reworking the project at a later time when my React skills have grown.
 
 ## Built With
 
