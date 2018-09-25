@@ -1,9 +1,11 @@
-{ "homepage": "https://chadwyck242.github.io/fend-myreads/",
+{
+  "homepage": "https://chadwyck242.github.io/fend-myreads/",
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
     "gh-pages": "^2.0.0",
     "prop-types": "^15.6.2",
-    "react": "^16.3.2",
+    "react": "^16.5.2",
+    "react-debounce-input": "^3.2.0",
     "react-dom": "^16.3.2",
     "react-router-dom": "^4.3.1",
     "sort-by": "^1.2.0"

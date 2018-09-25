@@ -7,8 +7,9 @@ import './App.css'
 
 class BooksApp extends React.Component {
 
-    state = {
-        books: []
+    constructor(props) {
+        super(props);
+        this.state = { books: [] };
     }
 
     componentDidMount() {
@@ -19,12 +20,14 @@ class BooksApp extends React.Component {
     }
 
     changeShelf = (book, shelf) => {
-        BooksAPI.update(book, shelf);
-        BooksAPI.getAll()
+        BooksAPI.update(book, shelf)
+        .then(BooksAPI.getAll()
         .then((books) => {
             this.setState({ books: books })
-        })
+        }));
     }
+
+    componentWill
 
     render() {
         return (

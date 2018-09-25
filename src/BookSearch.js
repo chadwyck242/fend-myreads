@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {DebounceInput} from 'react-debounce-input'
 import * as BooksAPI from './BooksAPI'
 import {Link} from 'react-router-dom'
 import Book from './Book';
@@ -44,10 +45,12 @@ class BookSearch extends Component {
                 <div className="search-books-bar">
                     <Link className="close-search" to="/" >Close</Link>
                     <div className="search-books-input-wrapper">
-                        <input
+                        <DebounceInput
                             type="text"
                             placeholder="Search by title or author"
                             value={ query }
+                            minLength={2}
+                            debounceTimeout={300}
                             onChange={(event) => this.updateQuery(event.target.value)}
                         />
                     </div>
