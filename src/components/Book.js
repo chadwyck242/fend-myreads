@@ -1,19 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Book(props) {
 
-        Book.propTypes = {
-            book: PropTypes.object.isRequired,
-            changeShelf: PropTypes.func.isRequired
-        }
+    const { book, getBookUpdate } = props
 
-        const { book, changeShelf, currentShelf } = props
-        let imageURL = (book.imageLinks && `url(${book.imageLinks.thumbnail})`)
-        const authorString = book.authors && book.authors.join(', ');
+    let imageURL = (book.imageLinks && `url(${book.imageLinks.thumbnail})`)
+    const authorString = book.authors && book.authors.join(', ');
 
-
-        return (
+    return (
+        <li>
             <div className="book">
                 <div className="book-top">
                     <div
@@ -27,11 +22,8 @@ function Book(props) {
                     </div>
                     <div className="book-shelf-changer">
                         <select
-                            onChange={(event) => changeShelf(
-                                book, event.target.value
-                            )}
-                            value={currentShelf}
-                        >
+                            value={ book.shelf || "none"}
+                            onChange={(event) => {getBookUpdate(book, event.target.value)}}>
                             <option value="move" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
@@ -43,7 +35,8 @@ function Book(props) {
                 <div className="book-title">{book.title}</div>
                 <div className="book-authors">{authorString}</div>
             </div>
-        )
+        </li>
+    )
 }
 
 export default Book

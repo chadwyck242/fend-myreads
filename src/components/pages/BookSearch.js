@@ -1,10 +1,9 @@
-import React, {Component} from 'react'
-import {DebounceInput} from 'react-debounce-input'
-import * as BooksAPI from './BooksAPI'
-import {Link} from 'react-router-dom'
-import Book from './Book';
-import PropTypes from 'prop-types'
-// import escapeRegExp from 'escape-string-regexp'
+import React, { Component } from 'react'
+import { DebounceInput } from 'react-debounce-input'
+import * as BooksAPI from '../../BooksAPI'
+import { Link } from 'react-router-dom'
+import Book from '../../components/Book';
+
 
 class BookSearch extends Component {
 
@@ -76,11 +75,6 @@ class BookSearch extends Component {
                 </div>
             </div>
         )
-    }
-
-    static propTypes = {
-        books: PropTypes.array.isRequired,
-        changeShelf: PropTypes.func.isRequired
     }
 }
 
