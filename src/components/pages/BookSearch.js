@@ -2,42 +2,60 @@ import React, { Component } from 'react'
 import { DebounceInput } from 'react-debounce-input'
 import * as BooksAPI from '../../BooksAPI'
 import { Link } from 'react-router-dom'
-import Book from '../../components/Book';
+import Book from '../Book';
 
 
 class BookSearch extends Component {
 
-    state = {
-        query: '',
-        queriedBooks: []
-    }
-
-    updateQuery = (query) => {
-        this.setState({
-            query: query
-        })
-        this.updateQueriedBooks(query);
-    }
-
-    updateQueriedBooks = (query) => {
-        if (query) {
-            BooksAPI.search(query)
-            .then((queriedBooks) => {
-                if(queriedBooks.error) {
-                    this.setState({ queriedBooks: [] });
-                } else {
-                    this.setState({ queriedBooks: queriedBooks })
-                }
-            })
-        } else {
-            this.setState({ queriedBooks: [] });
+    constructor(props) {
+        super(props);
+        this.state = {
+            books: [],
+            queriedBooks: [],
+            query: ''
         }
+    }
+
+    componentDidMount() {
+        BooksAPI.getAll()
+        .then((resp) => {
+            this.setState({ books: resp })
+        })
+    }
+
+    getQueryUpdate = (query) => {
+        this.setState({query: query}, this.submitBookQuery)
+    }
+
+    submitBookQuery = () => {
+        let currentSearch = this.state.query
+        if(currentSearch === '' || currentSearch === undefined) {
+            return this.setState({ queriedBooks: [] })
+        }
+        BooksAPI.search(currentSearch.trim())
+        .then(resp => {
+            if(resp.error) {
+                return this.setState({ queriedBooks: [] })
+            }
+            else {
+                return this.setState({ queriedBooks: resp })
+            }
+        })
+    }
+
+    getBookUpdate = (book, shelf) => {
+        BooksAPI.update(book, shelf)
+        .then(resp => {
+            book.shelf = shelf
+            this.setState(state => ({
+                books: state.books.filter(b => b.id !== book.id).concat([book])
+            }))
+        })
     }
 
     render() {
 
-        const { query, queriedBooks } = this.state
-        const { books, changeShelf } = this.props
+        const { books, query, queriedBooks } = this.state
 
         return (
             <div className="search-books">
@@ -50,27 +68,21 @@ class BookSearch extends Component {
                             value={ query }
                             minLength={2}
                             debounceTimeout={300}
-                            onChange={(event) => this.updateQuery(event.target.value)}
+                            onChange={(event) => this.getQueryUpdate(event.target.value)}
                         />
                     </div>
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {queriedBooks.map(queriedBook => {
-                            let activeShelf = 'none'
-                            books.map(book => (
-                                book.id === queriedBook.id ? activeShelf = book.shelf : ""
-                            ))
-                            return (
-                                <li key={queriedBook.id}>
-                                    <Book
-                                        book={queriedBook}
-                                        changeShelf={changeShelf}
-                                        currentShelf={activeShelf}
-                                    />
-                                </li>
+                        {
+                            queriedBooks.map((book, key) =>
+                                <Book
+                                    getBookUpdate={this.getBookUpdate}
+                                    key={key}
+                                    book={book}
+                                />
                             )
-                        })}
+                        }
                     </ol>
                 </div>
             </div>

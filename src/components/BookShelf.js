@@ -1,33 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Book from './Book'
 
 
-class BookShelf extends Component {
+function BookShelf(props) {
 
-    componentDidMount() {
-        console.log(this)
-    }
+    // componentDidMount() {
+    //     console.log(this)
+    // }
 
-    render() {
-        const { books, shelfName, getBookUpdate } = this.props
-        return (
-            <div className="bookshelf">
-                <h2 className="bookshelf-title">{shelfName}</h2>
-                <div className="bookshelf-books">
-                    <ol className="books-grid">
-                        {
-                            books.map((book, key) =>
-                                <Book
-                                    getBookUpdate={getBookUpdate}
-                                    book={book}
-                                    key={book.id}
-                                />)
-                        }
-                    </ol>
-                </div>
+    const { books, shelfName } = props
+    return (
+        <div className="bookshelf">
+            <h2 className="bookshelf-title">{shelfName}</h2>
+            <div className="bookshelf-books">
+                <ol className="books-grid">
+                    {
+                        books.map((book, key) =>
+                            <Book
+                                book={book}
+                                key={key}
+                                getBookUpdate={props.getBookUpdate}
+                            />)
+                    }
+                </ol>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default BookShelf
