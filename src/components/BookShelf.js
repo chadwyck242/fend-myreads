@@ -4,10 +4,6 @@ import Book from './Book'
 
 function BookShelf(props) {
 
-    // componentDidMount() {
-    //     console.log(this)
-    // }
-
     const { books, shelfName } = props
     return (
         <div className="bookshelf">

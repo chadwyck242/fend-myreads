@@ -38,6 +38,11 @@ class BookSearch extends Component {
                 return this.setState({ queriedBooks: [] })
             }
             else {
+                resp.forEach(foundBook => {
+                    let matchedBooks = this.state.books.filter(
+                        shelvedBook => shelvedBook.id === foundBook.id )
+                        foundBook.shelf = matchedBooks[0] ? matchedBooks[0].shelf : undefined
+                })
                 return this.setState({ queriedBooks: resp })
             }
         })
@@ -48,14 +53,14 @@ class BookSearch extends Component {
         .then(resp => {
             book.shelf = shelf
             this.setState(state => ({
-                books: state.books.filter(b => b.id !== book.id).concat([book])
+                books: state.books.filter(newBook => newBook.id !== book.id).concat([book])
             }))
         })
     }
 
     render() {
 
-        const { books, query, queriedBooks } = this.state
+        const { query, queriedBooks } = this.state
 
         return (
             <div className="search-books">
