@@ -1,14 +1,14 @@
 # Udacity FEND MyReads (React) Project P6
 
-The first if the React projects, but sixth project overall, of the Front End Developer NanoDegree from Udacity. Completed as part of the Grow with Google Scholarship program of which I am a student.
+The first of the React projects, but sixth project overall, of the Front End Developer NanoDegree from Udacity. Completed as part of the Grow with Google Scholarship program of which I am a student.
 
 ## Getting Started
 
-This project is simple to run on your local machine, as all that is needed is NodeJS and the cloned project repository. To use the app, there are the following features:
+This project is simple to run on your local machine, as all that is needed is NodeJS and the cloned project repository. To use the application, just review the following features:
 
 * You can sort books based on status, using the dropdown selector: Currently Reading, Want to Read and Read.
 * These books are then placed on a matching shelf according to your selection. You can also open a Search bar using the on-screen button and search for books.
-* Your search selections then can be added to the categories listed about, and added to the appropriate bookshelf.
+* Your search selections then can be added to the categories listed above, and added to the appropriate bookshelf.
 
 
 ### Prerequisites
@@ -20,7 +20,7 @@ This project is simple to run on your local machine, as all that is needed is No
 
 ### Installing
 
-Just follow these steps:
+Please follow these steps:
 
 1. Install NodeJS [here](https://nodejs.org/en/download/)
 2. Clone the project repository at `https://github.com/chadwyck242/fend-myreads`
@@ -56,4 +56,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * React Documentation [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
 
 ### Quick Reflection
-This is the one of the final two projects for the Grow with Google Scholarship Front End Developer NanoDegree. Of all the topics so far, this has been one of the more challenging to suddenly start with as React is much different than what we have been doing up until this point. As to why the starting projects of the React NanoDegree would comprise the ending of the FEND program is a bit confusing to me, as I am sure there is plenty that could have been covered in a pure Front End education. But after trying to work through this first project with React, I plan on coming back later and trying again. Having to rush near the end of the term left little time to explore, but I have become very curious about these new ways to build applications for the Front End.
+This is the one of the final two projects for the Grow with Google Scholarship Front End Developer NanoDegree. Of all the topics so far, this has been one of the more challenging to suddenly start with, as React is much different than what we have been doing up until this point. As to why the starting projects of the React NanoDegree would comprise the ending of the FEND program is a bit confusing to me, as I am sure there is plenty that could have been covered in a pure Front End education. But after trying to work through this first project with React, I plan on coming back later and trying again. Having to rush near the end of the term left little time to explore, but I have become very curious about these new ways to build applications for the Front End.
